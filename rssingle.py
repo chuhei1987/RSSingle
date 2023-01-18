@@ -187,7 +187,7 @@ if __name__ == "__main__":
 
     global CONFIG
 
-    with open("config.yml", "r") as file:
+    with open( CONFIG_PATH , "r") as file:
         CONFIG = yaml.safe_load(file)
 
     log.debug("Assiging variables..")
