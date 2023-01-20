@@ -2,6 +2,7 @@ title: My RSS Feed
 description: My customised RSS feed with technology news
 url: https://www.example.com
 output: rss.xml
+storepath: /home/chuhei1987/rssingle/rss.xml
 feeds:
   - https://programadorwebvalencia.com/feed/
   - https://republicaweb.es/feed/
