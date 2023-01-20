@@ -194,7 +194,7 @@ if __name__ == "__main__":
     try:
         # Configuration is specified with configure variables.
         log.debug("Assignment attempt: output")
-        FEED_OUT_PATH = CONFIG["output"] #That's so tricky, the output should be modified to another path.
+        FEED_OUT_PATH = CONFIG["storepath"] #That's so tricky, the output should be modified to another path.
     except KeyError:
         log.error("*** Configure variable missing! ***")
         log.error("`output` variable missing.")
