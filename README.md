@@ -8,19 +8,9 @@ Generates an RSS file from the list of other feeds (RSS/Atom/JSON). Very handy w
 
 ## Run
 
-1. Download the binary.
+1. Download the source code, install python as If you like some advanced way for example, do something just like WHAT a team from Sydney, Australia does (I prefer not mention their project name), then you have to rewire the source code to get your need.
 
-**Linux**
-
-``` shell
-wget https://github.com/tanrax/RSSingle/releases/download/v1.0.0/rssingle
-```
-
-**Windows**
-
-``` shell
-wget https://github.com/tanrax/RSSingle/releases/download/v1.0.0/rssingle.exe
-```
+It is said, the python script should be set to 755 at step two.
 
 2. Gives execution permissions.
 
@@ -49,7 +39,7 @@ curl -o config.yml https://raw.githubusercontent.com/tanrax/RSSingle/master/conf
 4. Run the binary.
 
 ``` shell
-./rssingle 
+./something.py
 ```
 
 A file called `rss.xml` will be created.
