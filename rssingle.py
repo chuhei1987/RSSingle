@@ -18,7 +18,7 @@ import yaml
 # Varaibles
 
 log = None
-CONFIG_PATH = "config.yml"
+CONFIG_PATH = "config.yml" #this is for path, as can't be hardcoded in later on
 LOG_LEVEL = environ.get("SR_LOG_LEVEl", "ERROR")
 fg = None
 FEED_OUT_PATH = None
@@ -66,10 +66,10 @@ def init_feed() -> None:
         # Setup [root] feed attributes
         fg.id(get_url_from_feed(CONFIG))
         fg.title(CONFIG["title"])
-        fg.generator("RSSingle/v1.0.0")
+        fg.generator("RSSingle/v1.0.0") #you may change whatever you like
         fg.link(href=get_url_from_feed(CONFIG), rel="self")
         fg.subtitle(CONFIG["description"])
-        fg.language("en")
+        fg.language("en") #you may change language if more than 61.8% is no English
     except:
         log.error("Error initialising the feed!")
         sys.exit(1)
@@ -145,7 +145,7 @@ def main():
                 # Sometimes we don't have ANY author attributes, so we
                 # have to set a dummy attribute.
                 log.warning("Empty authors attribute, defaulting..")
-                fe.author({"name": "Unspecified", "email": "unspecified@example.com"})
+                #fe.author({"name": "Unspecified", "email": "unspecified@example.com"})
 
             try:
                 if entry["summary"]:
@@ -194,7 +194,7 @@ if __name__ == "__main__":
     try:
         # Configuration is specified with configure variables.
         log.debug("Assignment attempt: output")
-        FEED_OUT_PATH = CONFIG["output"]
+        FEED_OUT_PATH = CONFIG["output"] #That's so tricky, the output should be modified to another path.
     except KeyError:
         log.error("*** Configure variable missing! ***")
         log.error("`output` variable missing.")
